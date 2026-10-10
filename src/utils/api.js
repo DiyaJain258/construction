@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-// const API_URL = import.meta.env.VITE_API_URL || 'https://constuctionbackend-production.up.railway.app/api';
-
-const API_URL = import.meta.env.VITE_API_URL || 'https://construction-production-b18f.up.railway.app/api';
-
-// const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
-
+let rawApiUrl = import.meta.env.VITE_API_URL || 'https://construction-production-b18f.up.railway.app/api';
+if (typeof window !== 'undefined' && window.location && window.location.hostname && window.location.hostname !== 'localhost' && rawApiUrl.includes('localhost')) {
+    rawApiUrl = rawApiUrl.replace('localhost', window.location.hostname);
+}
+const API_URL = rawApiUrl;
 export const BASE_URL = API_URL.replace('/api', '');
 
 const api = axios.create({

@@ -36,7 +36,9 @@ const getRoleBadgeStyle = (role) => {
 
 const CANONICAL_USER_ALIASES = {
     '6a5b33f89845db87c7a92641': '69cda4ad4a2742699702e4c6',
-    '6aae432ece4d83703ab0c45f': '69cda4ad4a2742699702e4c6'
+    '6aae432ece4d83703ab0c45f': '69cda4ad4a2742699702e4c6',
+    '6abb6f8bce4d83703ad7ba33': '6abe1c27ce4d83703ae01cde',
+    '6aca042387c80bf9ff100f2e': '6abe1c27ce4d83703ae01cde'
 };
 
 const Chat = () => {
